@@ -1,7 +1,5 @@
-import sha1 from 'sha1';
-import dbClient from '../utils/db';
-const RedisClient = require('../utils/redis');
-const { ObjectId } = require('mongodb');
+const sha1 = require('sha1');
+const dbClient = require('../utils/db');
 
 class UsersController {
   static postNew(request, response) {
@@ -30,7 +28,6 @@ class UsersController {
           },
         ).then((result) => {
           response.status(201).json({ id: result.insertedId, email });
-
         }).catch((error) => console.log(error));
       }
     });
