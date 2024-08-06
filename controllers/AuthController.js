@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+const { v4: uuidv4 } = require('uuid');
 
 const sha1 = require('sha1');
 const dbClient = require('../utils/db');
