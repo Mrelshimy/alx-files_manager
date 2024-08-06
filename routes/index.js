@@ -1,13 +1,13 @@
 const express = require('express');
 const AppController = require('../controllers/AppController');
-const UserController = require('../controllers/UsersController');
+const UsersController = require('../controllers/UsersController');
 // const AuthController = require('../controllers/AuthController');
 
 const router = express.Router();
 
 router.get('/status', AppController.getStatus);
 router.get('/stats', AppController.getStats);
-router.post('/users', UserController.postNew);
+router.post('/users', UsersController.postNew);
 // router.get('/connect', AuthController.getConnect);
 // router.get('/disconnect', AuthController.getDisonnect);
 // router.get('/users/me', UserController.getMe);
